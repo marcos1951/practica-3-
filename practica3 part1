@@ -1,0 +1,18 @@
+using System;
+
+namespace Tarea3
+{
+    class Persona
+    {
+        public string nombre;
+        public string facebook;
+        public string domicilio;
+        public string telefono;
+        public string codigo;
+        public string borrar;
+        public string imprimir;
+        
+    }
+
+
+}
