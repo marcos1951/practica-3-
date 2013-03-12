@@ -1,0 +1,111 @@
+using System;
+using System.Collections;
+
+
+namespace Tarea3
+{
+ 
+
+    class Tarea3
+    {
+     
+        Hashtable hashtable = new Hashtable();
+        
+        static void Main(string[] args)
+        {
+            
+            
+            for (int i = 0; i < 4; i++)
+            {
+                Persona persona = new Persona();
+               
+                Console.WriteLine("INGRESA EL CODIGO:\n");
+                persona.codigo = Console.ReadLine();
+
+                Console.WriteLine("\nINGRESA TU NOMBRE:");
+                persona.nombre = Console.ReadLine();
+
+                Console.WriteLine("\nINGRESA TU DOMICILIO:");
+                persona.domicilio = Console.ReadLine();
+
+                Console.WriteLine("\nINGRESA EL FACEBOOK:");
+                persona.facebook = Console.ReadLine();
+
+                Console.WriteLine("\nNUMERO DE CELULAR:");
+                persona.telefono = Console.ReadLine();
+
+                Console.Clear();
+                
+                hashtable.Add(persona.codigo,persona);
+               } 
+
+
+    }
+        public void imprimir()
+        {
+           
+            Console.WriteLine("LOS DATOS SON\n",persona.codigo);
+          
+            {
+
+                Console.WriteLine("LOS DATOS SON :", Persona.codigo);
+                Console.ReadLine(); 
+            }
+        }
+
+        
+        private void imprimePersona(Persona persona)
+        {
+            Console.WriteLine("EL CODIGO ES: ", persona.codigo);
+            Console.WriteLine("NOMBRE: ", persona.nombre);
+            Console.WriteLine("DOMICILIO: ", persona.domicilio);
+            Console.WriteLine("TELEFONO: ",persona.telefono);
+            Console.WriteLine("FACEBOOK: ",persona.facebook);
+      
+            Console.ReadLine();
+        }
+        
+        
+        
+     public void borrar()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                Console.Clear();
+                string codigo = "";
+               
+                Console.WriteLine("INGRESA EL CODIGO QUE DESEA ELIMINAR \n");
+                codigo = Console.ReadLine();
+               
+                if (hashtable.ContainsKey(codigo))
+                {
+                   
+                    imprimePersona(persona.codigo);
+                   
+                    Console.WriteLine("CONFIRMAR SU ELIMINACION\n",codigo);
+                }
+                else
+                {
+                 
+                      Console.WriteLine("ERROR");
+                }
+            }
+        }
+
+        public void confirmarsueliminacion(string codigo)
+        {
+            Console.WriteLine("DESEA ELIMINAR ESTE CODIGO\n");
+            Console.WriteLine("0 = NO, 1 = SI");
+            string opcion = Console.ReadLine();
+           
+            if (opcion != "0")
+            {
+                Console.WriteLine("CODIGO ELIMINADO",codigo);
+                Console.ReadLine();
+            }
+        }
+    
+    
+    }
+
+}
